@@ -1,0 +1,18 @@
+@(question: String, choices: List[String])
+
+@import helper._
+
+@main(question) {
+    <h1>@question</h1>
+
+    @form(action = routes.Questions.question, args = 'id -> "questionForm") {
+    
+        <p class="buttons">
+		  @for((i, choice) <- choices.zipWithIndex) {
+            <li><input type="submit" value="@choice" id="choice@i"><li>
+		  }
+        <p>
+
+    }
+
+}

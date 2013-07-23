@@ -10,16 +10,16 @@ import play.api.test.Helpers._
  * You can mock out a whole application including requests, plugins etc.
  * For more information, consult the wiki.
  */
-class ApplicationSpec extends Specification {
+class QuestionsSpec extends Specification {
   
-  "Application" should {
+  "Questions" should {
     
     "send 404 on a bad request" in {
       running(FakeApplication()) {
         route(FakeRequest(GET, "/boum")) must beNone        
       }
     }
-    
+    /*
     "render the index page" in {
       running(FakeApplication()) {
         val home = route(FakeRequest(GET, "/")).get
@@ -29,5 +29,7 @@ class ApplicationSpec extends Specification {
         contentAsString(home) must contain ("Your new application is ready.")
       }
     }
+    * 
+    */
   }
 }

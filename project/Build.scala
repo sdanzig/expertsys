@@ -11,7 +11,7 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
     jdbc,
     anorm,
-    "org.specs2" %% "specs2" % "2.1"// % "test"
+    "org.specs2" %% "specs2" % "2.0-RC2" % "test"
   )
 
 
